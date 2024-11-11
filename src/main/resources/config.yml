@@ -1,0 +1,6 @@
+worlds:
+  spawn:
+    enabled: true
+    void_y: 22
+    commands:
+      - "cmi spawn %player% -s"
