@@ -1,5 +1,6 @@
 package me.seetch.voidTeleport;
 
+import me.seetch.voidTeleport.command.VoidTeleportCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
@@ -19,6 +20,7 @@ public final class VoidTeleport extends JavaPlugin implements Listener {
         saveDefaultConfig();
         config = getConfig();
         getServer().getPluginManager().registerEvents(this, this);
+        getCommand("voidteleport").setExecutor(new VoidTeleportCommand(this));
     }
 
     @EventHandler
